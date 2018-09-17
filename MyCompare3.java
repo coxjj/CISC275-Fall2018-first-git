@@ -1,9 +1,13 @@
+
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class MyCompare3 {
+
+
+public class MyCompare3{
 	
 	public static void main(String[] args){
 		
@@ -19,8 +23,12 @@ public class MyCompare3 {
 			    return a.getLegs() - b.getLegs();
 			}
 		});
+		
+
+	
 		System.out.println(dogs);
-		Collections.sort(dogs);
+		Collections.sort(dogs, new SortByLegs());
 		System.out.println(dogs);
 	}
+
 }
